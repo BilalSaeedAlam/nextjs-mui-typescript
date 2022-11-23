@@ -18,7 +18,7 @@ export default function Home() {
   const [mode, setMode] = useState<"light" | "dark">("light");
 
   let now = new Date();
-  const backdate = new Date(now.setDate(now.getDate() + 30));
+  const backdate = new Date(now.setDate(now.getDate() + 1000));
   let date = useCountdown(backdate);
   const handlerChaneMode = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
@@ -57,7 +57,7 @@ export default function Home() {
           </IconButton>
         </Box>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Protect Plus!</a>
+          Welcome to <a href="https://nextjs.org">Next Js | MUI | Typescript</a>
         </h1>
         <h2>We will be live soon.</h2>
         <h1>{`Days: ${date.days} Hours: ${date.hours} Minutes: ${date.minutes} Seconds: ${date.seconds}`}</h1>
